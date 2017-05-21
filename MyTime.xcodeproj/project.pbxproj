@@ -1,0 +1,489 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C677A56C1EA07D9500C3E1A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C677A56B1EA07D9500C3E1A4 /* main.m */; };
+		C677A56F1EA07D9500C3E1A4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C677A56E1EA07D9500C3E1A4 /* AppDelegate.m */; };
+		C677A5751EA07D9500C3E1A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C677A5731EA07D9500C3E1A4 /* Main.storyboard */; };
+		C677A57A1EA07D9500C3E1A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C677A5791EA07D9500C3E1A4 /* Assets.xcassets */; };
+		C6CF355D1ECE6641005786B7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6CF355C1ECE6641005786B7 /* CoreData.framework */; };
+		C6D4BFE41ECFE971002C0CF5 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C6D4BFE21ECFE971002C0CF5 /* Model.xcdatamodeld */; };
+		F4810DD51ECC1566001DADB5 /* MyTimeCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F4810DD41ECC1566001DADB5 /* MyTimeCustomCell.m */; };
+		F4810DD81ECC15A3001DADB5 /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4810DD71ECC15A3001DADB5 /* AddViewController.m */; };
+		F4810DDB1ECC15BC001DADB5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4810DDA1ECC15BC001DADB5 /* ViewController.m */; };
+		F4810DDE1ECC15D9001DADB5 /* LeftMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4810DDD1ECC15D9001DADB5 /* LeftMenuViewController.m */; };
+		F4810DE11ECC1602001DADB5 /* KAProgressLabel+KAProgressLabel_DefaultObjectProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = F4810DE01ECC1602001DADB5 /* KAProgressLabel+KAProgressLabel_DefaultObjectProperties.m */; };
+		F4810DE61ECC161D001DADB5 /* KAProgressLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F4810DE31ECC161D001DADB5 /* KAProgressLabel.m */; };
+		F4810DE71ECC161D001DADB5 /* TPPropertyAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = F4810DE51ECC161D001DADB5 /* TPPropertyAnimation.m */; };
+		F4810DF11ECC1647001DADB5 /* MMDrawerBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F4810DE91ECC1647001DADB5 /* MMDrawerBarButtonItem.m */; };
+		F4810DF21ECC1647001DADB5 /* MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4810DEB1ECC1647001DADB5 /* MMDrawerController.m */; };
+		F4810DF31ECC1647001DADB5 /* MMDrawerVisualState.m in Sources */ = {isa = PBXBuildFile; fileRef = F4810DEE1ECC1647001DADB5 /* MMDrawerVisualState.m */; };
+		F4810DF41ECC1647001DADB5 /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4810DF01ECC1647001DADB5 /* UIViewController+MMDrawerController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C677A5671EA07D9500C3E1A4 /* MyTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C677A56B1EA07D9500C3E1A4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C677A56D1EA07D9500C3E1A4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C677A56E1EA07D9500C3E1A4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C677A5741EA07D9500C3E1A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C677A5791EA07D9500C3E1A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C677A57E1EA07D9500C3E1A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6CF355C1ECE6641005786B7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		C6D4BFE31ECFE971002C0CF5 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		F4810DD31ECC1566001DADB5 /* MyTimeCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyTimeCustomCell.h; path = Libs/MyTimeCustomCell/MyTimeCustomCell.h; sourceTree = "<group>"; };
+		F4810DD41ECC1566001DADB5 /* MyTimeCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyTimeCustomCell.m; path = Libs/MyTimeCustomCell/MyTimeCustomCell.m; sourceTree = "<group>"; };
+		F4810DD61ECC15A3001DADB5 /* AddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddViewController.h; path = Controllers/AddViewController/AddViewController.h; sourceTree = "<group>"; };
+		F4810DD71ECC15A3001DADB5 /* AddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddViewController.m; path = Controllers/AddViewController/AddViewController.m; sourceTree = "<group>"; };
+		F4810DD91ECC15BC001DADB5 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = Controllers/MainViewController/ViewController.h; sourceTree = "<group>"; };
+		F4810DDA1ECC15BC001DADB5 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = Controllers/MainViewController/ViewController.m; sourceTree = "<group>"; };
+		F4810DDC1ECC15D9001DADB5 /* LeftMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LeftMenuViewController.h; path = Controllers/LeftViewController/LeftMenuViewController.h; sourceTree = "<group>"; };
+		F4810DDD1ECC15D9001DADB5 /* LeftMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LeftMenuViewController.m; path = Controllers/LeftViewController/LeftMenuViewController.m; sourceTree = "<group>"; };
+		F4810DDF1ECC1602001DADB5 /* KAProgressLabel+KAProgressLabel_DefaultObjectProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "KAProgressLabel+KAProgressLabel_DefaultObjectProperties.h"; path = "Libs/KAProgressLabelAdapters/KAProgressLabel+KAProgressLabel_DefaultObjectProperties.h"; sourceTree = "<group>"; };
+		F4810DE01ECC1602001DADB5 /* KAProgressLabel+KAProgressLabel_DefaultObjectProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "KAProgressLabel+KAProgressLabel_DefaultObjectProperties.m"; path = "Libs/KAProgressLabelAdapters/KAProgressLabel+KAProgressLabel_DefaultObjectProperties.m"; sourceTree = "<group>"; };
+		F4810DE21ECC161D001DADB5 /* KAProgressLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KAProgressLabel.h; path = Libs/KAProgressLabel/KAProgressLabel.h; sourceTree = "<group>"; };
+		F4810DE31ECC161D001DADB5 /* KAProgressLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KAProgressLabel.m; path = Libs/KAProgressLabel/KAProgressLabel.m; sourceTree = "<group>"; };
+		F4810DE41ECC161D001DADB5 /* TPPropertyAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TPPropertyAnimation.h; path = Libs/KAProgressLabel/TPPropertyAnimation.h; sourceTree = "<group>"; };
+		F4810DE51ECC161D001DADB5 /* TPPropertyAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TPPropertyAnimation.m; path = Libs/KAProgressLabel/TPPropertyAnimation.m; sourceTree = "<group>"; };
+		F4810DE81ECC1647001DADB5 /* MMDrawerBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMDrawerBarButtonItem.h; path = Libs/MMDrawer/MMDrawerBarButtonItem.h; sourceTree = "<group>"; };
+		F4810DE91ECC1647001DADB5 /* MMDrawerBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMDrawerBarButtonItem.m; path = Libs/MMDrawer/MMDrawerBarButtonItem.m; sourceTree = "<group>"; };
+		F4810DEA1ECC1647001DADB5 /* MMDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMDrawerController.h; path = Libs/MMDrawer/MMDrawerController.h; sourceTree = "<group>"; };
+		F4810DEB1ECC1647001DADB5 /* MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMDrawerController.m; path = Libs/MMDrawer/MMDrawerController.m; sourceTree = "<group>"; };
+		F4810DEC1ECC1647001DADB5 /* MMDrawerController+Subclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MMDrawerController+Subclass.h"; path = "Libs/MMDrawer/MMDrawerController+Subclass.h"; sourceTree = "<group>"; };
+		F4810DED1ECC1647001DADB5 /* MMDrawerVisualState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMDrawerVisualState.h; path = Libs/MMDrawer/MMDrawerVisualState.h; sourceTree = "<group>"; };
+		F4810DEE1ECC1647001DADB5 /* MMDrawerVisualState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMDrawerVisualState.m; path = Libs/MMDrawer/MMDrawerVisualState.m; sourceTree = "<group>"; };
+		F4810DEF1ECC1647001DADB5 /* UIViewController+MMDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+MMDrawerController.h"; path = "Libs/MMDrawer/UIViewController+MMDrawerController.h"; sourceTree = "<group>"; };
+		F4810DF01ECC1647001DADB5 /* UIViewController+MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+MMDrawerController.m"; path = "Libs/MMDrawer/UIViewController+MMDrawerController.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C677A5641EA07D9500C3E1A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6CF355D1ECE6641005786B7 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C677A55E1EA07D9500C3E1A4 = {
+			isa = PBXGroup;
+			children = (
+				C6D4BFE21ECFE971002C0CF5 /* Model.xcdatamodeld */,
+				C677A5691EA07D9500C3E1A4 /* MyTime */,
+				C677A5681EA07D9500C3E1A4 /* Products */,
+				C6CF355B1ECE6640005786B7 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C677A5681EA07D9500C3E1A4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C677A5671EA07D9500C3E1A4 /* MyTime.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C677A5691EA07D9500C3E1A4 /* MyTime */ = {
+			isa = PBXGroup;
+			children = (
+				C6CF35501ECE569D005786B7 /* Models */,
+				F4810DCC1ECC11D1001DADB5 /* Controllers */,
+				C67EBE841EB088CA00511B24 /* libs */,
+				C677A56D1EA07D9500C3E1A4 /* AppDelegate.h */,
+				C677A56E1EA07D9500C3E1A4 /* AppDelegate.m */,
+				C677A5731EA07D9500C3E1A4 /* Main.storyboard */,
+				C677A56A1EA07D9500C3E1A4 /* Supporting Files */,
+			);
+			path = MyTime;
+			sourceTree = "<group>";
+		};
+		C677A56A1EA07D9500C3E1A4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C677A57E1EA07D9500C3E1A4 /* Info.plist */,
+				C677A5791EA07D9500C3E1A4 /* Assets.xcassets */,
+				C677A56B1EA07D9500C3E1A4 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C67EBE7D1EB0888F00511B24 /* KAProgressLabel */ = {
+			isa = PBXGroup;
+			children = (
+				F4810DE21ECC161D001DADB5 /* KAProgressLabel.h */,
+				F4810DE31ECC161D001DADB5 /* KAProgressLabel.m */,
+				F4810DE41ECC161D001DADB5 /* TPPropertyAnimation.h */,
+				F4810DE51ECC161D001DADB5 /* TPPropertyAnimation.m */,
+			);
+			name = KAProgressLabel;
+			sourceTree = "<group>";
+		};
+		C67EBE841EB088CA00511B24 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				F4810DCB1ECC1199001DADB5 /* MyTimeCustomCell */,
+				F4810DCA1ECC116F001DADB5 /* KAProgressLabelAdapters */,
+				C67EBE7D1EB0888F00511B24 /* KAProgressLabel */,
+				F4FA8ECA1EA4499C0091B958 /* MMDrawer */,
+			);
+			name = libs;
+			sourceTree = "<group>";
+		};
+		C6CF35501ECE569D005786B7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		C6CF355B1ECE6640005786B7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C6CF355C1ECE6641005786B7 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F4810DCA1ECC116F001DADB5 /* KAProgressLabelAdapters */ = {
+			isa = PBXGroup;
+			children = (
+				F4810DDF1ECC1602001DADB5 /* KAProgressLabel+KAProgressLabel_DefaultObjectProperties.h */,
+				F4810DE01ECC1602001DADB5 /* KAProgressLabel+KAProgressLabel_DefaultObjectProperties.m */,
+			);
+			name = KAProgressLabelAdapters;
+			sourceTree = "<group>";
+		};
+		F4810DCB1ECC1199001DADB5 /* MyTimeCustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				F4810DD31ECC1566001DADB5 /* MyTimeCustomCell.h */,
+				F4810DD41ECC1566001DADB5 /* MyTimeCustomCell.m */,
+			);
+			name = MyTimeCustomCell;
+			sourceTree = "<group>";
+		};
+		F4810DCC1ECC11D1001DADB5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F4810DCF1ECC1289001DADB5 /* AddViewController */,
+				F4810DCE1ECC1213001DADB5 /* MainViewController */,
+				F4810DCD1ECC11F7001DADB5 /* LeftViewController */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		F4810DCD1ECC11F7001DADB5 /* LeftViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F4810DDC1ECC15D9001DADB5 /* LeftMenuViewController.h */,
+				F4810DDD1ECC15D9001DADB5 /* LeftMenuViewController.m */,
+			);
+			name = LeftViewController;
+			sourceTree = "<group>";
+		};
+		F4810DCE1ECC1213001DADB5 /* MainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F4810DD91ECC15BC001DADB5 /* ViewController.h */,
+				F4810DDA1ECC15BC001DADB5 /* ViewController.m */,
+			);
+			name = MainViewController;
+			sourceTree = "<group>";
+		};
+		F4810DCF1ECC1289001DADB5 /* AddViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F4810DD61ECC15A3001DADB5 /* AddViewController.h */,
+				F4810DD71ECC15A3001DADB5 /* AddViewController.m */,
+			);
+			name = AddViewController;
+			sourceTree = "<group>";
+		};
+		F4FA8ECA1EA4499C0091B958 /* MMDrawer */ = {
+			isa = PBXGroup;
+			children = (
+				F4810DE81ECC1647001DADB5 /* MMDrawerBarButtonItem.h */,
+				F4810DE91ECC1647001DADB5 /* MMDrawerBarButtonItem.m */,
+				F4810DEA1ECC1647001DADB5 /* MMDrawerController.h */,
+				F4810DEB1ECC1647001DADB5 /* MMDrawerController.m */,
+				F4810DEC1ECC1647001DADB5 /* MMDrawerController+Subclass.h */,
+				F4810DED1ECC1647001DADB5 /* MMDrawerVisualState.h */,
+				F4810DEE1ECC1647001DADB5 /* MMDrawerVisualState.m */,
+				F4810DEF1ECC1647001DADB5 /* UIViewController+MMDrawerController.h */,
+				F4810DF01ECC1647001DADB5 /* UIViewController+MMDrawerController.m */,
+			);
+			name = MMDrawer;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C677A5661EA07D9500C3E1A4 /* MyTime */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C677A5811EA07D9500C3E1A4 /* Build configuration list for PBXNativeTarget "MyTime" */;
+			buildPhases = (
+				C677A5631EA07D9500C3E1A4 /* Sources */,
+				C677A5641EA07D9500C3E1A4 /* Frameworks */,
+				C677A5651EA07D9500C3E1A4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyTime;
+			productName = MyTime;
+			productReference = C677A5671EA07D9500C3E1A4 /* MyTime.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C677A55F1EA07D9500C3E1A4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Daniel Richardson";
+				TargetAttributes = {
+					C677A5661EA07D9500C3E1A4 = {
+						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = SH63S6GAX5;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = C677A5621EA07D9500C3E1A4 /* Build configuration list for PBXProject "MyTime" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C677A55E1EA07D9500C3E1A4;
+			productRefGroup = C677A5681EA07D9500C3E1A4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C677A5661EA07D9500C3E1A4 /* MyTime */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C677A5651EA07D9500C3E1A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C677A57A1EA07D9500C3E1A4 /* Assets.xcassets in Resources */,
+				C677A5751EA07D9500C3E1A4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C677A5631EA07D9500C3E1A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4810DDB1ECC15BC001DADB5 /* ViewController.m in Sources */,
+				F4810DF31ECC1647001DADB5 /* MMDrawerVisualState.m in Sources */,
+				F4810DE11ECC1602001DADB5 /* KAProgressLabel+KAProgressLabel_DefaultObjectProperties.m in Sources */,
+				C6D4BFE41ECFE971002C0CF5 /* Model.xcdatamodeld in Sources */,
+				F4810DF11ECC1647001DADB5 /* MMDrawerBarButtonItem.m in Sources */,
+				F4810DDE1ECC15D9001DADB5 /* LeftMenuViewController.m in Sources */,
+				C677A56F1EA07D9500C3E1A4 /* AppDelegate.m in Sources */,
+				F4810DD81ECC15A3001DADB5 /* AddViewController.m in Sources */,
+				C677A56C1EA07D9500C3E1A4 /* main.m in Sources */,
+				F4810DF41ECC1647001DADB5 /* UIViewController+MMDrawerController.m in Sources */,
+				F4810DE61ECC161D001DADB5 /* KAProgressLabel.m in Sources */,
+				F4810DD51ECC1566001DADB5 /* MyTimeCustomCell.m in Sources */,
+				F4810DF21ECC1647001DADB5 /* MMDrawerController.m in Sources */,
+				F4810DE71ECC161D001DADB5 /* TPPropertyAnimation.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C677A5731EA07D9500C3E1A4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C677A5741EA07D9500C3E1A4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C677A57F1EA07D9500C3E1A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C677A5801EA07D9500C3E1A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C677A5821EA07D9500C3E1A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = SH63S6GAX5;
+				INFOPLIST_FILE = MyTime/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.daniel-richardson.MyTime";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		C677A5831EA07D9500C3E1A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = SH63S6GAX5;
+				INFOPLIST_FILE = MyTime/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.daniel-richardson.MyTime";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C677A5621EA07D9500C3E1A4 /* Build configuration list for PBXProject "MyTime" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C677A57F1EA07D9500C3E1A4 /* Debug */,
+				C677A5801EA07D9500C3E1A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C677A5811EA07D9500C3E1A4 /* Build configuration list for PBXNativeTarget "MyTime" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C677A5821EA07D9500C3E1A4 /* Debug */,
+				C677A5831EA07D9500C3E1A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C6D4BFE21ECFE971002C0CF5 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C6D4BFE31ECFE971002C0CF5 /* Model.xcdatamodel */,
+			);
+			currentVersion = C6D4BFE31ECFE971002C0CF5 /* Model.xcdatamodel */;
+			name = Model.xcdatamodeld;
+			path = MyTime/Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = C677A55F1EA07D9500C3E1A4 /* Project object */;
+}
