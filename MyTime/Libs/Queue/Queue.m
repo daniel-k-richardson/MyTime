@@ -30,4 +30,17 @@
     return head;
 }
 
+-(id)peek {
+    id head = nil;
+    
+    if ([self.data count] > 0) {
+        head = [self.data objectAtIndex:0];
+        return head;
+    }
+    
+    
+    return head;
+}
+
+
 @end

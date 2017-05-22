@@ -13,5 +13,6 @@
 
 -(void)enqueue:(id)anObject;
 -(id)dequeue;
+-(id)peek;
 
 @end
