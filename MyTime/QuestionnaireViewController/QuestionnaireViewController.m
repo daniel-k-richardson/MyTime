@@ -100,7 +100,7 @@
             } else {
                 isDone = YES;
                 counter = 0;
-                questionLabel.text = @"where are done here";
+                questionLabel.text = @"Were are done here click slave and exit to return to the main window";
                 //NSLog(@"short:%d Attitude:%d Long:%d", scores[0], scores[1], scores[2]);
                 [self calculatePrecentages];
             }

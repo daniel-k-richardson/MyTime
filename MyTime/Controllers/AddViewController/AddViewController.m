@@ -94,17 +94,16 @@
 {
     if (component == 0)
     {
-        self->importance  = [[NSString alloc] initWithFormat:
-                                  @"%@", _categoryPickerData[row]];
+        self->importance  = [[NSString alloc] initWithFormat:@"%@", _categoryPickerData[row]];
     } else {
-        self->assignmentWeight = [[NSString alloc] initWithFormat:
-                                  @"%@", _weightValuePickerData[row]];
+        self->assignmentWeight = [[NSString alloc] initWithFormat:@"%@", _weightValuePickerData[row]];
     }
 }
 
 
 
 - (IBAction)dateChanged:(UIDatePicker *)sender {
+    
     self->dueDate = sender.date;
 }
 
@@ -116,6 +115,7 @@
     
     context = ((AppDelegate*)[UIApplication sharedApplication].delegate).persistentContainer.viewContext;
     NSManagedObject *entityNameObj = [NSEntityDescription insertNewObjectForEntityForName:@"Tasks" inManagedObjectContext:context];
+    
     
     [entityNameObj setValue:self->assignmentTitle forKey:@"name"];
     [entityNameObj setValue:self->dueDate forKey:@"due_date"];

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C6687BA01ED2E67300E21D32 /* Queue.m in Sources */ = {isa = PBXBuildFile; fileRef = C6687B9F1ED2E67300E21D32 /* Queue.m */; };
+		C6687BA41ED3495300E21D32 /* TimeManagementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6687BA31ED3495300E21D32 /* TimeManagementViewController.m */; };
 		C677A56C1EA07D9500C3E1A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C677A56B1EA07D9500C3E1A4 /* main.m */; };
 		C677A56F1EA07D9500C3E1A4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C677A56E1EA07D9500C3E1A4 /* AppDelegate.m */; };
 		C677A5751EA07D9500C3E1A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C677A5731EA07D9500C3E1A4 /* Main.storyboard */; };
@@ -31,6 +32,8 @@
 /* Begin PBXFileReference section */
 		C6687B9E1ED2E67300E21D32 /* Queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Queue.h; path = Libs/Queue/Queue.h; sourceTree = "<group>"; };
 		C6687B9F1ED2E67300E21D32 /* Queue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Queue.m; path = Libs/Queue/Queue.m; sourceTree = "<group>"; };
+		C6687BA21ED3495300E21D32 /* TimeManagementViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TimeManagementViewController.h; path = Controllers/TipsTimeManagementViewController/TimeManagementViewController.h; sourceTree = "<group>"; };
+		C6687BA31ED3495300E21D32 /* TimeManagementViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TimeManagementViewController.m; path = Controllers/TipsTimeManagementViewController/TimeManagementViewController.m; sourceTree = "<group>"; };
 		C677A5671EA07D9500C3E1A4 /* MyTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C677A56B1EA07D9500C3E1A4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C677A56D1EA07D9500C3E1A4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -97,6 +100,15 @@
 			name = Queue;
 			sourceTree = "<group>";
 		};
+		C6687BA51ED3981C00E21D32 /* TimeManagementTipsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C6687BA21ED3495300E21D32 /* TimeManagementViewController.h */,
+				C6687BA31ED3495300E21D32 /* TimeManagementViewController.m */,
+			);
+			name = TimeManagementTipsViewController;
+			sourceTree = "<group>";
+		};
 		C677A55E1EA07D9500C3E1A4 = {
 			isa = PBXGroup;
 			children = (
@@ -118,7 +130,6 @@
 		C677A5691EA07D9500C3E1A4 /* MyTime */ = {
 			isa = PBXGroup;
 			children = (
-				C6CF35501ECE569D005786B7 /* Models */,
 				F4810DCC1ECC11D1001DADB5 /* Controllers */,
 				C67EBE841EB088CA00511B24 /* libs */,
 				C677A56D1EA07D9500C3E1A4 /* AppDelegate.h */,
@@ -162,13 +173,6 @@
 			name = libs;
 			sourceTree = "<group>";
 		};
-		C6CF35501ECE569D005786B7 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Models;
-			sourceTree = "<group>";
-		};
 		C6CF355B1ECE6640005786B7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -202,6 +206,7 @@
 				F4810DCE1ECC1213001DADB5 /* MainViewController */,
 				F4810DCD1ECC11F7001DADB5 /* LeftViewController */,
 				C6687B9A1ED2DD5200E21D32 /* QuestionnaireViewController */,
+				C6687BA51ED3981C00E21D32 /* TimeManagementTipsViewController */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -325,6 +330,7 @@
 				F4810DF31ECC1647001DADB5 /* MMDrawerVisualState.m in Sources */,
 				F4810DE11ECC1602001DADB5 /* KAProgressLabel+KAProgressLabel_DefaultObjectProperties.m in Sources */,
 				C6D4BFE41ECFE971002C0CF5 /* Model.xcdatamodeld in Sources */,
+				C6687BA41ED3495300E21D32 /* TimeManagementViewController.m in Sources */,
 				F4810DF11ECC1647001DADB5 /* MMDrawerBarButtonItem.m in Sources */,
 				F48DB2231ED29BAF007A3F10 /* QuestionnaireViewController.m in Sources */,
 				F4810DDE1ECC15D9001DADB5 /* LeftMenuViewController.m in Sources */,
