@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Queue.h"
 
 @interface QuestionnaireViewController : UIViewController
 
