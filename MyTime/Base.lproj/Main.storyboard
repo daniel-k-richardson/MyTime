@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Cgu-lP-0Fs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Cgu-lP-0Fs">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -68,7 +68,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="178"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="MyTimeCustomCell" tableViewCell="O8Y-Dq-bs4" id="hpL-TY-hJh">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="177"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="177.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Assignment:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b4B-Ep-j2c">
@@ -334,9 +334,37 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vmr-eh-5Cl">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="3000"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TjN-oH-USA">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                                                <color key="backgroundColor" red="0.37341129779999999" green="0.51790130140000001" blue="0.67459011079999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1000" id="DK9-EF-7JJ"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wmI-eL-bb0">
+                                                <rect key="frame" x="0.0" y="1001" width="375" height="785"/>
+                                                <color key="backgroundColor" red="0.65258574489999999" green="0.32583174110000002" blue="0.31376838680000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RVh-5p-IUl">
+                                                <rect key="frame" x="0.0" y="1787" width="375" height="1148"/>
+                                                <color key="backgroundColor" red="0.4835998118" green="0.60728430749999995" blue="0.39609780909999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </view>
+                                        </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="RVh-5p-IUl" secondAttribute="bottom" constant="65" id="JBP-ec-wUy"/>
+                                            <constraint firstItem="wmI-eL-bb0" firstAttribute="leading" secondItem="TjN-oH-USA" secondAttribute="leading" id="Se0-Rj-VcA"/>
+                                            <constraint firstItem="wmI-eL-bb0" firstAttribute="trailing" secondItem="RVh-5p-IUl" secondAttribute="trailing" id="Vzg-HQ-7oN"/>
+                                            <constraint firstItem="RVh-5p-IUl" firstAttribute="top" secondItem="wmI-eL-bb0" secondAttribute="bottom" constant="1" id="XVN-ET-VgH"/>
+                                            <constraint firstAttribute="trailing" secondItem="TjN-oH-USA" secondAttribute="trailing" id="Yla-fT-wXy"/>
+                                            <constraint firstItem="wmI-eL-bb0" firstAttribute="leading" secondItem="RVh-5p-IUl" secondAttribute="leading" id="h8c-3B-4f5"/>
+                                            <constraint firstItem="TjN-oH-USA" firstAttribute="leading" secondItem="Vmr-eh-5Cl" secondAttribute="leading" id="nry-ue-wYb"/>
+                                            <constraint firstItem="TjN-oH-USA" firstAttribute="top" secondItem="Vmr-eh-5Cl" secondAttribute="top" id="oWr-J0-B4M"/>
                                             <constraint firstAttribute="height" constant="3000" id="qsb-nc-3Oa"/>
+                                            <constraint firstItem="wmI-eL-bb0" firstAttribute="trailing" secondItem="TjN-oH-USA" secondAttribute="trailing" id="tuN-KB-HzD"/>
+                                            <constraint firstItem="wmI-eL-bb0" firstAttribute="top" secondItem="TjN-oH-USA" secondAttribute="bottom" constant="1" id="xA5-OR-DDz"/>
+                                            <constraint firstAttribute="bottom" secondItem="wmI-eL-bb0" secondAttribute="bottom" constant="1214" id="zFJ-w3-aSy"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -365,7 +393,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vkk-aW-9nz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="993" y="2042"/>
+            <point key="canvasLocation" x="992.79999999999995" y="2041.9790104947529"/>
         </scene>
         <!--Settings-->
         <scene sceneID="wbv-s5-Wb4">
@@ -390,7 +418,7 @@
             <objects>
                 <navigationController storyboardIdentifier="settingsViiewController" title="Settings" automaticallyAdjustsScrollViewInsets="NO" id="NBw-VL-ib5" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="iak-wf-vNy">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iak-wf-vNy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
