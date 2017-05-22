@@ -111,13 +111,7 @@
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        //remove the deleted object from your data source.
-        //If your data source is an NSMutableArray, do this
-        //[cell removeObjectAtIndex:indexPath.row];
-        
-        //[colorNames removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationLeft];
-        [tableView reloadData]; // tell table to refresh now
     }
 }
 
@@ -143,18 +137,16 @@
     [cell.dueDate setText:[NSString stringWithFormat:@"%@", [task valueForKey:@"due_date"]]];
     [cell.importance setText:[NSString stringWithFormat:@"%@", [task valueForKey:@"importance"]]];
     
-    
-    
     return cell;
 }
 
 
 -(NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UITableViewRowAction *deleteAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:@"Delete"  handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
+    UITableViewRowAction *deleteAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal
+                                                                            title:@"Delete"  handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
         
         NSLog(@"index: %ld",(long)indexPath.row);
-        
         //NSManagedObject *task = [self->tasks objectAtIndex:indexPath.row];
         
         [context deleteObject:[self->tasks objectAtIndex:indexPath.row]];
@@ -163,15 +155,23 @@
         {
             NSLog(@"Error ! %@", error);
         }
-        
-        
-        
-        
         [tableView reloadData];
-        
     }];
     deleteAction.backgroundColor = [UIColor redColor];
-    return @[deleteAction];
+    
+    
+    UITableViewRowAction *editAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal
+                                                                          title:@"Edit"  handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
+        
+        NSLog(@"index: %ld",(long)indexPath.row);
+        [tableView reloadData];
+    }];
+    
+    
+    
+    
+    editAction.backgroundColor = [UIColor greenColor];
+    return @[deleteAction, editAction];
 }
 
 @end
