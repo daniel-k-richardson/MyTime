@@ -24,6 +24,7 @@
 		F4810DF21ECC1647001DADB5 /* MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4810DEB1ECC1647001DADB5 /* MMDrawerController.m */; };
 		F4810DF31ECC1647001DADB5 /* MMDrawerVisualState.m in Sources */ = {isa = PBXBuildFile; fileRef = F4810DEE1ECC1647001DADB5 /* MMDrawerVisualState.m */; };
 		F4810DF41ECC1647001DADB5 /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4810DF01ECC1647001DADB5 /* UIViewController+MMDrawerController.m */; };
+		F48DB2231ED29BAF007A3F10 /* QuestionnaireViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F48DB2221ED29BAF007A3F10 /* QuestionnaireViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,8 @@
 		F4810DEE1ECC1647001DADB5 /* MMDrawerVisualState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMDrawerVisualState.m; path = Libs/MMDrawer/MMDrawerVisualState.m; sourceTree = "<group>"; };
 		F4810DEF1ECC1647001DADB5 /* UIViewController+MMDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+MMDrawerController.h"; path = "Libs/MMDrawer/UIViewController+MMDrawerController.h"; sourceTree = "<group>"; };
 		F4810DF01ECC1647001DADB5 /* UIViewController+MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+MMDrawerController.m"; path = "Libs/MMDrawer/UIViewController+MMDrawerController.m"; sourceTree = "<group>"; };
+		F48DB2211ED29BAF007A3F10 /* QuestionnaireViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestionnaireViewController.h; path = QuestionnaireViewController/QuestionnaireViewController.h; sourceTree = "<group>"; };
+		F48DB2221ED29BAF007A3F10 /* QuestionnaireViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestionnaireViewController.m; path = QuestionnaireViewController/QuestionnaireViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +179,8 @@
 				F4810DCF1ECC1289001DADB5 /* AddViewController */,
 				F4810DCE1ECC1213001DADB5 /* MainViewController */,
 				F4810DCD1ECC11F7001DADB5 /* LeftViewController */,
+				F48DB2211ED29BAF007A3F10 /* QuestionnaireViewController.h */,
+				F48DB2221ED29BAF007A3F10 /* QuestionnaireViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -300,6 +305,7 @@
 				F4810DE11ECC1602001DADB5 /* KAProgressLabel+KAProgressLabel_DefaultObjectProperties.m in Sources */,
 				C6D4BFE41ECFE971002C0CF5 /* Model.xcdatamodeld in Sources */,
 				F4810DF11ECC1647001DADB5 /* MMDrawerBarButtonItem.m in Sources */,
+				F48DB2231ED29BAF007A3F10 /* QuestionnaireViewController.m in Sources */,
 				F4810DDE1ECC15D9001DADB5 /* LeftMenuViewController.m in Sources */,
 				C677A56F1EA07D9500C3E1A4 /* AppDelegate.m in Sources */,
 				F4810DD81ECC15A3001DADB5 /* AddViewController.m in Sources */,
