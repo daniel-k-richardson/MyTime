@@ -19,60 +19,58 @@
     NSUserDefaults *defaults;
 }
 
+
 // The user's score chart for short, attitude and long term goals
 @synthesize timeManagementShortChart;
 @synthesize timeMagementAttitudeChart;
 @synthesize timeManagementLongChart;
 
+
+
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    
+    // blue theme for short term time management
+    NSDictionary *blueTheme = @{@"red":@0.03f, @"green":@0.22f, @"blue":@0.39f, @"alpha":@1.0f};
+    NSDictionary *redTheme = @{@"red":@0.40f, @"green":@0.00f, @"blue":@0.00f, @"alpha":@1.0f};
+    NSDictionary *greenTheme = @{@"red":@0.15f, @"green":@0.31f, @"blue":@0.07f, @"alpha":@1.0f};
+    
+    // populate short term time management chart with default data
+    self.timeManagementShortChart = [KAProgressLabel fillWithDefaultValues: self.timeManagementShortChart
+                                                             categoryScore:[defaults floatForKey:@"shortScorePrecentage"]
+                                                                 endDegree:35.0f
+                                                               colourTheme:blueTheme];
+    
+    // populate short term time management chart with default data
+    self.timeMagementAttitudeChart = [KAProgressLabel fillWithDefaultValues: self.timeMagementAttitudeChart
+                                                              categoryScore:[defaults floatForKey:@"attitudeScorePrecentage"]
+                                                                  endDegree:30.0f
+                                                                colourTheme:redTheme];
+    
+    // populate short term time management chart with default data
+    self.timeManagementLongChart = [KAProgressLabel fillWithDefaultValues: self.timeManagementLongChart
+                                                            categoryScore:[defaults floatForKey:@"longScorePrecentage"]
+                                                                endDegree:25.0f
+                                                              colourTheme:greenTheme];
 }
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    // defaults storing their time management scores
     defaults = [NSUserDefaults standardUserDefaults];
     
+    // coredata for storing tasks for the custom cell
     context = ((AppDelegate*)[UIApplication sharedApplication].delegate).persistentContainer.viewContext;
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Tasks"];
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Tasks" inManagedObjectContext:context];
     [fetchRequest setEntity:entity];
     
+    // check for errors
     NSError *error = nil;
     tasks = [context executeFetchRequest:fetchRequest error:&error];
-    
-    if (tasks == nil) {
-        NSLog(@"something done fucked up daniel");
-    }
-    
-    //Reading from NSUserDefaults
-    float shortScore = [defaults floatForKey:@"shortScorePrecentage"];
-    float attitudeScore = [defaults floatForKey:@"attitudeScorePrecentage"];
-    float longScore = [defaults floatForKey:@"longScorePrecentage"];
-
-    // blue theme for short term time management
-    NSDictionary *colourTheme1 = @{@"red":@0.03f, @"green":@0.22f, @"blue":@0.39f, @"alpha":@1.0f};
-    
-    // red theme for attitude to time management
-    NSDictionary *colourTheme2 = @{@"red":@0.40f, @"green":@0.00f, @"blue":@0.00f, @"alpha":@1.0f};
-    
-    // green theme for long term time management
-    NSDictionary *colourTheme3 = @{@"red":@0.15f, @"green":@0.31f, @"blue":@0.07f, @"alpha":@1.0f};
-    
-    // populate short term time management chart with default data
-    self.timeManagementShortChart = [KAProgressLabel fillWithDefaultValues: self.timeManagementShortChart
-                                                             categoryScore:shortScore endDegree:35.0f
-                                                               colourTheme:colourTheme1];
-    
-    // populate short term time management chart with default data
-    self.timeMagementAttitudeChart = [KAProgressLabel fillWithDefaultValues: self.timeMagementAttitudeChart
-                                                              categoryScore:attitudeScore endDegree:30.0f
-                                                                colourTheme:colourTheme2];
-    
-    // populate short term time management chart with default data
-    self.timeManagementLongChart = [KAProgressLabel fillWithDefaultValues: self.timeManagementLongChart
-                                                            categoryScore:longScore endDegree:25.0f
-                                                              colourTheme:colourTheme3];
 }
+
 
 /**
  Listens for the setting button, once the user has clicked the button the view should
@@ -101,6 +99,7 @@
     return [tasks count];
 }
 
+
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     // Return YES if you want the specified item to be editable.
     return YES;
@@ -112,6 +111,7 @@
         NSLog(@"index: %ld",(long)indexPath.row);
     }
 }
+
 
 /**
  This function takes three arrays of values, in this case name, unitcode etc. the
@@ -135,6 +135,7 @@
     
     return cell;
 }
+
 
 -(NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewRowAction *deleteAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:@"Delete"  handler:^(UITableViewRowAction *action, NSIndexPath *indexPath){
