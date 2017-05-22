@@ -15,6 +15,9 @@
     Queue *questions;
     Queue *current;
     Queue *sectionLabels;
+    
+    int scores[3];
+    bool isDone;
 }
 @end
 
@@ -23,7 +26,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    scores[0] = 0;
+    scores[1] = 0;
+    scores[2] = 0;
+    isDone = NO;
     
     Queue *section1 = [[Queue alloc] init];
     [section1 enqueue:@"1. Do you make a list of the things you have to do each day?"];
@@ -54,54 +61,53 @@
     [sectionLabels enqueue:@"Attitude to time management"];
     [sectionLabels enqueue:@"Long term time management"];
     
-    sectionLabel.text = [sectionLabels dequeue];
-    
     questions = [[Queue alloc] init];
     [questions enqueue:section1];
     [questions enqueue:section2];
     [questions enqueue:section3];
 
     current = [questions dequeue];
-//    NSLog(@"%@", [test dequeue]);
-
-
+    sectionLabel.text = [sectionLabels dequeue];
+    questionLabel.text = [current dequeue];
 }
 
 
 - (IBAction)awnserClicked:(UIButton *)sender {
+    static int counter = 0;
     NSString *buttonTitle = [(UIButton *)sender currentTitle];
     
-    if ([buttonTitle isEqualToString:@"Never"]) {
-        
-
-    } else if ([buttonTitle isEqualToString:@"Rarely"]) {
-      
-
-    } else if ([buttonTitle isEqualToString:@"Occasionally"]) {
-        // todo
-     
-        
-    } else if ([buttonTitle isEqualToString:@"Regularly"]) {
-        // todo
-   
- 
-    } else {
-        // todo
-
-    }
-    
-    
-    if ([current peek]) {
-        questionLabel.text = [current dequeue];
-    } else {
-        if ([questions peek]) {
-            current = [questions dequeue];
-            questionLabel.text = [current dequeue];
-            sectionLabel.text = [sectionLabels dequeue];
+    if(!isDone) {
+        if ([buttonTitle isEqualToString:@"Never"]) {
+            scores[counter]+= 1;
+        } else if ([buttonTitle isEqualToString:@"Rarely"]) {
+            scores[counter]+= 2;
+        } else if ([buttonTitle isEqualToString:@"Occasionally"]) {
+            scores[counter]+= 3;
+        } else if ([buttonTitle isEqualToString:@"Regularly"]) {
+            scores[counter]+= 4;
         } else {
-            questionLabel.text = @"where are done here";
+            scores[counter]+= 5;
+        }
+        
+        if ([current peek]) {
+            questionLabel.text = [current dequeue];
+        } else {
+            if ([questions peek]) {
+                current = [questions dequeue];
+                questionLabel.text = [current dequeue];
+                sectionLabel.text = [sectionLabels dequeue];
+                counter++;
+            } else {
+                isDone = YES;
+                counter = 0;
+                questionLabel.text = @"where are done here";
+                NSLog(@"short:%d Attitude:%d Long:%d", scores[0], scores[1], scores[2]);
+            }
         }
     }
+    
+    
+    
 }
 
 
