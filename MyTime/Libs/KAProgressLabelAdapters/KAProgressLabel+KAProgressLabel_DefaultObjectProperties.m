@@ -25,39 +25,43 @@
  this allows for only one colour to be passed to it to reduce code.
  @return a KAProgressLabel to the caller.
  */
-+(KAProgressLabel *)fillWithDefaultValues:(KAProgressLabel *)label
-                            categoryScore:(CGFloat)score
-                                endDegree:(CGFloat)endDegree
-                              colourTheme:(NSDictionary *)colourTheme {
++(KAProgressLabel *)fillWithDefaultValues:(KAProgressLabel *)label categoryScore:(CGFloat)score
+                                endDegree:(CGFloat)endDegree colourTheme:(NSDictionary *)colourTheme {
+    
+    // colour offset value
     CGFloat offset = 0.30;
     
-    label.startDegree = 0.0f;
+    // set the start of the chat and the end of the chart to show progress
+    label.startDegree = 2.0f;
     label.endDegree = endDegree;
     label.progress = (score / label.endDegree);
     
+    // style of the charts, widths, thickness etc..
     label.trackWidth = 15.0f;
     label.progressWidth = 15.0f;
     label.roundedCornersWidth = 15.0f;
     label.trackWidth = 15.0f;
     label.progressWidth = 15.0f;
     label.roundedCornersWidth = 15.0f;
-    
     label.backgroundColor = [UIColor clearColor];
-    label.fillColor = [[UIColor lightGrayColor] colorWithAlphaComponent:0.3f];
     
+    // sets the background colour of the chart
+    label.fillColor = [[UIColor lightGrayColor] colorWithAlphaComponent:0.3f];
     label.trackColor = [UIColor colorWithRed:[colourTheme[@"red"] floatValue]
                                        green:[colourTheme[@"green"] floatValue]
                                         blue:[colourTheme[@"blue"] floatValue]
                                        alpha:[colourTheme[@"alpha"] floatValue]];
     
+    // sets the progress colour of the chart
     label.progressColor = [UIColor colorWithRed:[colourTheme[@"red"] floatValue] + offset
                                           green:[colourTheme[@"green"] floatValue] + offset
                                            blue:[colourTheme[@"blue"] floatValue] + offset
                                           alpha:[colourTheme[@"alpha"] floatValue]];
     
+    // shows the precentage value to the user
+    label.text = [NSString stringWithFormat:@"%.0f%%", (score * 100) / endDegree];
     
-    label.text = [NSString stringWithFormat:@"%.0f%%", (score / label.endDegree) * 100];
-    
+    // stops the labels from being moved around by the user
     label.isStartDegreeUserInteractive = NO;
     label.isEndDegreeUserInteractive = NO;
     

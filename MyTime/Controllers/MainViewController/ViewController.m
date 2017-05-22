@@ -16,6 +16,7 @@
     NSArray *tasks;
     NSManagedObjectContext *context;
     MyTimeCustomCell *cell;
+    NSUserDefaults *defaults;
 }
 
 // The user's score chart for short, attitude and long term goals
@@ -29,6 +30,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    defaults = [NSUserDefaults standardUserDefaults];
     
     context = ((AppDelegate*)[UIApplication sharedApplication].delegate).persistentContainer.viewContext;
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Tasks"];
@@ -41,41 +43,34 @@
     if (tasks == nil) {
         NSLog(@"something done fucked up daniel");
     }
-
-    // is a place holder score
-    CGFloat shortTimemanagementScore = 11.0f;
+    
+    //Reading from NSUserDefaults
+    float shortScore = [defaults floatForKey:@"shortScorePrecentage"];
+    float attitudeScore = [defaults floatForKey:@"attitudeScorePrecentage"];
+    float longScore = [defaults floatForKey:@"longScorePrecentage"];
 
     // blue theme for short term time management
-    NSDictionary *colourTheme1 = @{@"red":@0.03f,
-                                  @"green":@0.22f,
-                                  @"blue":@0.39f,
-                                  @"alpha":@1.0f};
+    NSDictionary *colourTheme1 = @{@"red":@0.03f, @"green":@0.22f, @"blue":@0.39f, @"alpha":@1.0f};
     
     // red theme for attitude to time management
-    NSDictionary *colourTheme2 = @{@"red":@0.40f,
-                                   @"green":@0.00f,
-                                   @"blue":@0.00f,
-                                   @"alpha":@1.0f};
+    NSDictionary *colourTheme2 = @{@"red":@0.40f, @"green":@0.00f, @"blue":@0.00f, @"alpha":@1.0f};
     
     // green theme for long term time management
-    NSDictionary *colourTheme3 = @{@"red":@0.15f,
-                                   @"green":@0.31f,
-                                   @"blue":@0.07f,
-                                   @"alpha":@1.0f};
+    NSDictionary *colourTheme3 = @{@"red":@0.15f, @"green":@0.31f, @"blue":@0.07f, @"alpha":@1.0f};
     
     // populate short term time management chart with default data
     self.timeManagementShortChart = [KAProgressLabel fillWithDefaultValues: self.timeManagementShortChart
-                                                             categoryScore:shortTimemanagementScore endDegree:30.0f
+                                                             categoryScore:shortScore endDegree:35.0f
                                                                colourTheme:colourTheme1];
     
     // populate short term time management chart with default data
     self.timeMagementAttitudeChart = [KAProgressLabel fillWithDefaultValues: self.timeMagementAttitudeChart
-                                                              categoryScore:shortTimemanagementScore endDegree:30.0f
+                                                              categoryScore:attitudeScore endDegree:30.0f
                                                                 colourTheme:colourTheme2];
     
     // populate short term time management chart with default data
     self.timeManagementLongChart = [KAProgressLabel fillWithDefaultValues: self.timeManagementLongChart
-                                                            categoryScore:shortTimemanagementScore endDegree:30.0f
+                                                            categoryScore:longScore endDegree:25.0f
                                                               colourTheme:colourTheme3];
 }
 

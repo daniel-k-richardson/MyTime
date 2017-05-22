@@ -101,12 +101,33 @@
                 isDone = YES;
                 counter = 0;
                 questionLabel.text = @"where are done here";
-                NSLog(@"short:%d Attitude:%d Long:%d", scores[0], scores[1], scores[2]);
+                //NSLog(@"short:%d Attitude:%d Long:%d", scores[0], scores[1], scores[2]);
+                [self calculatePrecentages];
             }
         }
     }
     
+}
+
+-(void)calculatePrecentages {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+
+//    float shortScorePrecentage = (100 * scores[0]) / 35;
+//    float attitudeScorePrecentage = (100 * scores[1]) / 30;
+//    float longScorePrecentage = (100 * scores[2]) / 25;
     
+    //Saving to NSUserDefaults
+    [defaults setFloat:scores[0] forKey:@"shortScorePrecentage"];
+    [defaults setFloat:scores[1] forKey:@"attitudeScorePrecentage"];
+    [defaults setFloat:scores[2] forKey:@"longScorePrecentage"];
+    [defaults synchronize];
+    
+    //Reading from NSUserDefaults
+    float myInt = [defaults floatForKey:@"shortScorePrecentage"];
+    float myString = [defaults floatForKey:@"attitudeScorePrecentage"];
+    
+    //Print out the values
+    NSLog(@"%f %f",myInt, myString );
     
 }
 
