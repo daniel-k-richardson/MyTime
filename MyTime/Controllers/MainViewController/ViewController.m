@@ -58,11 +58,19 @@
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Tasks" inManagedObjectContext:context];
     [fetchRequest setEntity:entity];
     
-    // check for errors
+//    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"importance = 'Both'"];
+//    [fetchRequest setPredicate:predicate];
+    
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"importance" ascending:YES];
+    [fetchRequest setSortDescriptors:@[sortDescriptor]];
+    
+    
     NSError *error = nil;
     tasks = [context executeFetchRequest:fetchRequest error:&error];
-
 }
+
+
+
 
 
 - (void)viewDidLoad {
@@ -141,36 +149,33 @@
 }
 
 
+// Swipe features for deleting an item or editing it
 -(NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    // handles the case that the user selects delete from the swipe in
     UITableViewRowAction *deleteAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal
                                                                             title:@"Delete"  handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
         
-        NSLog(@"index: %ld",(long)indexPath.row);
-        //NSManagedObject *task = [self->tasks objectAtIndex:indexPath.row];
-        
         [context deleteObject:[self->tasks objectAtIndex:indexPath.row]];
         NSError * error = nil;
+                                                                                
         if (![context save:&error])
         {
             NSLog(@"Error ! %@", error);
         }
+                                                                                
         [tableView reloadData];
     }];
     deleteAction.backgroundColor = [UIColor redColor];
     
-    
+    // handles what happens when the user clicks the edit button from the slide in
     UITableViewRowAction *editAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal
                                                                           title:@"Edit"  handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
-        
         NSLog(@"index: %ld",(long)indexPath.row);
         [tableView reloadData];
     }];
-    
-    
-    
-    
     editAction.backgroundColor = [UIColor greenColor];
+    
     return @[deleteAction, editAction];
 }
 
